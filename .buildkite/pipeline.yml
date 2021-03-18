@@ -1,7 +1,10 @@
 
 steps:
   - name: ":python:"
-    command: "py.test"
+    command: |
+	pip install -e .
+	pytest .
+	mpirun -np 4 pytest .
     plugins:
       - docker-compose#v3.0.3:
-          run: app
+          run: testing-environment
