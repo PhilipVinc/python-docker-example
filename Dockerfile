@@ -5,7 +5,7 @@ RUN 	   apt-get update
 RUN 	   apt-get install -y openmpi-bin libopenmpi-dev
 RUN        pip install pipenv
 
-COPY       . testing/
+COPY       . /testing
 
 WORKDIR    /testing
 
