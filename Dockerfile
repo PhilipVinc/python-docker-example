@@ -3,16 +3,11 @@ FROM	   python
 
 RUN 	   apt-get update
 RUN 	   apt-get install -y openmpi-bin libopenmpi-dev
-RUN        pip install pipenv
+RUN        pip install -U pip
+
+ENV        SHELL=/bin/bash
 
 COPY       . /testing
 
 WORKDIR    /testing
 
-ENV        SHELL=/bin/bash
-
-RUN        pipenv install 
-
-ENTRYPOINT ["pipenv", "run"]
-
-CMD        ["pytest", "."]
