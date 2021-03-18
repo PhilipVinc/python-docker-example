@@ -1,3 +1,0 @@
-jax
-mpi4py>=3.0.1
-numpy
