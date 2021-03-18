@@ -1,5 +1,5 @@
 version: '3'
 
 services:
-  test-environment
+  test-environment:
     build: .
